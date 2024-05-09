@@ -1,0 +1,50 @@
+class Circle
+{
+
+    circle(radius)
+    {
+        this.radius = radius;
+    }
+
+    circle(radius = 1.0, color = "Red")
+    {
+        this.radius = radius;
+        this.color = color;
+    }
+
+    getRadius()
+    {
+        return this.radius;
+    }
+    setRadius()
+    {
+        this.radius = this.radius;
+    }
+    getColor()
+    {
+        return this.color;
+    }
+    setColor()
+    {
+        this.color = this.color;
+    }
+    toString()
+    {
+        return `Radius: ${this.radius} Color: ${this.color}`;
+    }
+
+    area()
+    {
+        return (Math.PI * (this.radius*this.radius));
+    }
+    circumference()
+    {
+        return (2*Math.PI*this.radius);
+    }
+}
+
+let obj = new Circle();
+obj.circle(5.0, "Yellow");
+console.log(obj.toString());
+console.log(`Area of Circle: ${obj.area()}`);
+console.log(`Circumference of the circle: ${obj.circumference()}`)

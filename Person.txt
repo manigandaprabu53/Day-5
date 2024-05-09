@@ -1,0 +1,18 @@
+class Person
+{
+    constructor(name, age, gender, occupation)
+    {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.occupation = occupation;
+    }
+
+    display()
+    {
+        console.log(`Name: ${this.name}\nAge: ${this.age}\nGender: ${this.gender}\nOccupation: ${this.occupation}`);
+    }
+}
+
+let person1 = new Person("Jack Sparrow", 50, "Male", "Marine Engineer");
+person1.display();
