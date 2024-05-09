@@ -1,0 +1,32 @@
+class Uber
+{
+    static distancePerKM = 8;
+    static durationPerHour = 100;
+    constructor(distance, duration)
+    {
+        this.distance = distance;
+        this.duration = duration;
+    }
+
+    calculateRide()
+    {
+        let dis = this.distance * Uber.distancePerKM;
+        let dur = (this.duration * Uber.durationPerHour)/60;
+        if(dis > dur)
+            return dis;
+        else
+            return dur;
+    }
+    calculateWait(time)
+    {
+        if(time <= 20)
+            return 0;
+        else if(time > 20 && time <= 60)
+            return 100;
+        else
+            return 150;
+    }
+}
+
+let ride1 = new Uber(12, 48);
+console.log(ride1.calculateRide() + ride1.calculateWait());
