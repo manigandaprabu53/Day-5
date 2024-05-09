@@ -1,0 +1,21 @@
+class Movie
+{
+    constructor(title, studio, rating="PG")
+    {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+
+    static getPG(movie)
+    {
+        return movie.filter((movie)=>movie.rating === "PG");
+    }
+}
+
+let movie1 = new Movie("Casino Royale", "Eon Productions", "PG13");
+//sing movie object
+console.log(movie1);
+let movies = [new Movie("Leo", "Lica Production"), new Movie("Casino Royale", "Eon Productions", "PG13"), new Movie("Inception", "Paramount Pictures", "PG")];
+//Array of movie object
+console.log(Movie.getPG(movies));
